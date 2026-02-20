@@ -21,3 +21,20 @@ def merge_array(left,right):
 
    return result
 
+
+# merge sort
+def merge_sort(array):
+   if len(array)<=1:
+       return array
+   mid = len(array)//2
+   left = array[:mid]
+   right = array[mid:]
+   l=merge_sort(left)
+   r=merge_sort(right)
+   return merge_array(l,r)
+
+
+nums = [3,1,2,4,1,5,2,6,4]
+ms = merge_sort(nums)
+print(ms)
+
