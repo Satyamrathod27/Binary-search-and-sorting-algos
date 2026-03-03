@@ -18,3 +18,24 @@ def binary_search(arr, target):
 
 arr = [3, 645, 342, 23, 67, 44, 11, 6, 7, 9, 1, 2, 4, 6, 7, 99]
 print(binary_search(arr, 1))
+
+nums = [5,7,3,2,6,1,5,9]
+target = 3
+low = 0
+high = len(nums)-1
+nums.sort()
+
+def binary(num,l,h):
+   if low>high:
+       return -1
+   m = (l + h) // 2
+   if num[m] == target:
+       return nums[m]
+   elif nums[m]<target:
+       return binary(num,m+1,h)
+   else:
+       return binary(num,l,m-1)
+
+e= binary(nums,low,high)
+print(e)
+
