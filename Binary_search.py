@@ -52,4 +52,21 @@ while low<=high:
 
 print(lb)
 
+# upper bound
+low  = 0
+high = n-1
+ub = n
+target = 1
+while low<=high:
+   mid = (low+high)//2
+   if nums[mid]>target:
+       ub = mid
+       high = mid-1
+   else:
+       low = mid+1
+
+print(ub)
+
+print(lb)
+
 
